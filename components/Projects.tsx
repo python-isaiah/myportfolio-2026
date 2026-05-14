@@ -15,6 +15,15 @@ interface Project {
 
 const projects: Project[] = [
   {
+    id: 0,
+    title: "Social Battery Monitor",
+    description: "A social battery monitoring application deployed to Vercel.",
+    significance: "Successfully built and deployed a functional utility tool with a high-fidelity interface.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    media: "/projects/featured-reel.mp4",
+    type: "video",
+  },
+  {
     id: 1,
     title: "ShortlistAI",
     description: "Automated job matching using a custom resume parser and scoring engine.",
@@ -76,7 +85,6 @@ export default function Projects() {
             </span>
           </h2>
           
-          {/* Scroll Buttons */}
           <div className="flex gap-4">
             <button 
               onClick={() => scroll("left")} 
@@ -103,7 +111,6 @@ export default function Projects() {
               key={p.id}
               layoutId={`card-${p.id}`}
               onClick={() => setSelected(p)}
-              // Smaller, fixed width cards (384px) that snap into place
               className="group relative w-[85vw] sm:w-[384px] shrink-0 aspect-[3/4] snap-start bg-surface border border-border rounded-3xl overflow-hidden cursor-pointer hover:border-purple-500/50 transition-all"
             >
               <div className="absolute inset-0 z-0">
@@ -144,7 +151,6 @@ export default function Projects() {
         </div>
       </div>
 
-      {/* Slide-out Panel (Remains identical) */}
       <AnimatePresence>
         {selected && (
           <>
